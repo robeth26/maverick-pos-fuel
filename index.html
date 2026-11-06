@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07130f">
+<meta name="description" content="Maverick POS Fuel - sistem kasir dan monitoring stok BBM.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<title>Maverick POS Fuel</title>
+<style>
+:root{--bg:#07130f;--panel:#10221b;--panel2:#142b22;--green:#21c58b;--white:#effaf4;--muted:#91a99d;--line:#1d3a2d;--orange:#ffb45c;--red:#f07171}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font:14px system-ui,-apple-system,Segoe UI,Roboto,sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:0}.app{max-width:900px;margin:auto;min-height:100dvh;display:flex;flex-direction:column}.top{height:66px;padding:0 16px;display:flex;align-items:center;gap:11px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#07130fee;backdrop-filter:blur(10px);z-index:3}.mark{width:40px;height:40px;border-radius:13px;background:#173e30;color:var(--green);display:grid;place-items:center;font-weight:1000;font-size:22px}.brand{font-weight:900;letter-spacing:1px}.sub{font-size:9px;color:var(--muted);letter-spacing:1.5px}.online{margin-left:auto;color:var(--green);font-size:10px;font-weight:800}.main{padding:16px;flex:1;padding-bottom:92px}.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(900px,100%);display:flex;overflow:auto;background:#091811f5;border-top:1px solid var(--line);padding:7px 4px calc(7px + env(safe-area-inset-bottom));z-index:4}.nav button{flex:1;min-width:66px;background:transparent;color:var(--muted);padding:7px 5px;border-radius:10px;font-size:10px}.nav button.active{background:#153a2c;color:var(--green);font-weight:800}.nav b{display:block;font-size:17px;margin-bottom:2px}.heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:5px 0 14px}.h1{font-size:23px;font-weight:900;margin:2px 0}.muted{color:var(--muted);font-size:12px;line-height:1.5}.eyebrow{color:var(--green);font-size:9px;font-weight:900;letter-spacing:1.5px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:11px}.metric{min-height:86px}.metric strong{display:block;font-size:18px;margin-top:7px}.section{font-size:15px;font-weight:900;margin:18px 0 10px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.btn{background:var(--green);color:#062016;padding:11px 14px;border-radius:11px;font-weight:900;font-size:12px}.btn.secondary{background:#1a392c;color:var(--white);border:1px solid #2b5b44}.btn.danger{background:#9e3434;color:white}.btn.small{padding:8px 10px}.btn:disabled{opacity:.4}.tank{display:grid;grid-template-columns:24px 1fr;gap:13px;min-height:138px}.gauge{height:110px;border-radius:10px;background:#294536;display:flex;align-items:end;overflow:hidden}.gauge span{display:block;width:100%;background:var(--green);border-radius:10px}.tankname{font-weight:900;font-size:15px}.stock{font-size:20px;font-weight:900;margin-top:6px}.bar{height:6px;background:#294536;border-radius:9px;overflow:hidden;margin-top:8px}.bar span{display:block;height:100%;background:var(--green)}.warn{color:var(--orange);font-weight:800}.good{color:var(--green);font-weight:800}.input{width:100%;background:#0a1912;border:1px solid #2a4939;border-radius:10px;padding:12px;color:var(--white);outline:none;margin:5px 0 12px}.label{display:block;color:var(--muted);font-size:11px;font-weight:800;margin-top:9px}.fuelchoices{display:flex;gap:8px;overflow:auto;margin:8px 0 12px}.fuelchoice{flex:1;min-width:110px;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px;color:var(--white)}.fuelchoice.active{border-color:var(--green);background:#153a2c}.fuelchoice strong{display:block;margin-bottom:4px}.totalbox{background:#0b1a13;border:1px solid #294536;border-radius:13px;padding:14px;margin:12px 0}.total{font-size:25px;color:var(--green);font-weight:900}.list{border-bottom:1px solid var(--line);padding:11px 0;display:flex;justify-content:space-between;gap:10px;align-items:center}.empty{text-align:center;color:var(--muted);padding:28px 5px}.actions{display:flex;gap:8px;flex-wrap:wrap}.actions>*{flex:1}.pill{font-size:9px;padding:4px 7px;border-radius:20px;background:#1b392c}.install{position:fixed;right:14px;bottom:82px;background:var(--green);color:#062016;padding:10px 13px;border-radius:30px;font-weight:900;z-index:5;box-shadow:0 5px 20px #0007}.modal{position:fixed;inset:0;background:#000b;display:none;align-items:end;z-index:8}.modal.show{display:flex}.sheet{width:min(600px,100%);max-height:90dvh;overflow:auto;margin:auto auto 0;background:#0d1e16;border:1px solid #244432;border-radius:22px 22px 0 0;padding:18px 18px calc(22px + env(safe-area-inset-bottom))}.sheethead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.close{background:transparent;color:var(--green);font-size:20px}.toast{position:fixed;top:75px;left:50%;transform:translateX(-50%);background:#183c2d;border:1px solid var(--green);border-radius:10px;padding:10px 14px;z-index:12;display:none}.footer{text-align:center;color:#587568;font-size:9px;letter-spacing:2px;margin:20px 0 5px}
+@media(min-width:650px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}.main{padding:22px}.nav{justify-content:center}.nav button{max-width:115px}.tank{max-width:520px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top"><div class="mark">M</div><div><div class="brand">MAVERICK <span style="color:var(--green)">POS</span></div><div class="sub">FUEL STATION EDITION</div></div><div class="online">● LOCAL</div></header>
+<main class="main" id="main"></main>
+<nav class="nav" id="nav">
+<button data-tab="Dashboard" class="active"><b>⌂</b>Dashboard</button>
+<button data-tab="Kasir"><b>▣</b>Kasir</button>
+<button data-tab="Tangki"><b>◫</b>Tangki</button>
+<button data-tab="Transaksi"><b>◷</b>Transaksi</button>
+<button data-tab="Laporan"><b>▥</b>Laporan</button>
+<button data-tab="Pengaturan"><b>⚙</b>Pengaturan</button>
+</nav>
+<button class="install" id="installBtn" hidden>＋ Pasang aplikasi</button>
+<div class="modal" id="modal"><section class="sheet"><div class="sheethead"><strong id="modalTitle">Form</strong><button class="close" id="closeModal">✕</button></div><div id="modalBody"></div></section></div>
+<div class="toast" id="toast"></div>
+</div>
+<script src="app.js"></script>
+</body></html>
